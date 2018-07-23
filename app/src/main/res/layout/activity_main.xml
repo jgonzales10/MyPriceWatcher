@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    //Buttons
+    <Button
+        android:id="@+id/searchButton"
+        android:onClick="searchClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:text="Search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentChangeDisplay"
+        app:layout_constraintVertical_bias="0.721" />
+
+    <Button
+        android:id="@+id/refreshButton"
+        android:onClick="refreshClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Refresh"
+        app:layout_constraintBottom_toTopOf="@+id/searchButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toEndOf="@+id/searchButton"
+        app:layout_constraintTop_toBottomOf="@+id/searchButton"
+        app:layout_constraintVertical_bias="0.461" />
+
+
+    //Constant TextViews
+    <TextView
+        android:id="@+id/constTitleDisplay"
+        android:textSize="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="MyPriceWatcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/constUrlDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Insert URL here:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constTitleDisplay"
+        app:layout_constraintVertical_bias="0.146" />
+
+    <TextView
+        android:id="@+id/constNameDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="92dp"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="@+id/constTitleDisplay"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/constTitleDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/constUrlDisplay" />
+
+    <TextView
+        android:id="@+id/constPriceDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:text="Initial Price"
+        app:layout_constraintEnd_toEndOf="@+id/constNameDisplay"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="@+id/constNameDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/constNameDisplay" />
+
+
+    <TextView
+        android:id="@+id/constCurrDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:text="Current Price"
+        app:layout_constraintEnd_toEndOf="@+id/constPriceDisplay"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="@+id/constPriceDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/constPriceDisplay" />
+
+    <TextView
+        android:id="@+id/constPercentDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Percentage Change"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/constCurrDisplay"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/constCurrDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/constCurrDisplay"
+        app:layout_constraintVertical_bias="0.123" />
+
+
+    //Awaiting Variables
+    <EditText
+        android:id="@+id/urlDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/constUrlDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constUrlDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/constUrlDisplay" />
+
+    <TextView
+        android:id="@+id/nameDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/constNameDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toEndOf="@+id/constNameDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/constNameDisplay" />
+
+    <TextView
+        android:id="@+id/initPriceDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/constPriceDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintStart_toEndOf="@+id/constPriceDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/constPriceDisplay"
+        app:layout_constraintVertical_bias="0.421" />
+
+    <TextView
+        android:id="@+id/currPriceDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/constCurrDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toEndOf="@+id/constCurrDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/constCurrDisplay" />
+
+    <TextView
+        android:id="@+id/percentChangeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/constPercentDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toEndOf="@+id/constPercentDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/constPercentDisplay" />
+
+</android.support.constraint.ConstraintLayout>
